@@ -1,0 +1,43 @@
+### NOTES
+GET http://localhost:3000/api/notes
+### 
+GET http://localhost:3000/api/notes/669f47fe3db85b8f90d6f3fe
+### 
+DELETE http://localhost:3000/api/notes/66a59c232f29c82771d11949
+### 
+PUT http://localhost:3000/api/notes/66a59caca5d1cfa5f624be0b
+Content-Type: application/json
+
+{
+  "content": "Tu cuerpo me llama",
+  "important": true
+}
+
+###
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTVlOGZiZDJmZGYzMzViNDIxY2ZhOSIsInVzZXJuYW1lIjoiYW5kcmVzZGF2aWQiLCJpYXQiOjE3MjIxNDkzNjAsImV4cCI6MTcyMjc1NDE2MH0.W0ETezYc_4wJsZ8x4ScxOYGyZnRj-BNsEij1hmY6yk4
+
+{
+  "content": "A note not important",
+  "important": false
+}
+### USERS
+GET http://localhost:3000/api/users
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "andresdavid",
+  "name": "andres",
+  "passwordHash": "laskin"
+}
+###
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "username": "andresdavid",
+  "password": "laskin"
+}
